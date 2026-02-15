@@ -54,7 +54,7 @@ practice/
 │       ├── contact.css
 │       └── account.css
 │
-├── db.sqlite3
+├──.gitignore/
 ├── manage.py
 ├── requirements.txt
 └── README.md
