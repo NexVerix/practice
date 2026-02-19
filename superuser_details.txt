@@ -1,4 +1,0 @@
-username = code1
-email = code1@gmail.com
-password = Code1@#$
-
