@@ -1,0 +1,82 @@
+/* About Page Styles */
+
+.about {
+    padding: 80px 10%;
+    background: #ffffff;
+}
+
+.about-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-wrapper img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.about-text ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.about-text ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* Why Us Section */
+.why-us {
+    padding: 80px 10%;
+    background: #f8f9fc;
+}
+
+.why-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.why-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+}
+
+.why-card h3 {
+    margin-bottom: 10px;
+    color: #0d6efd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about,
+    .why-us {
+        padding: 60px 6%;
+    }
+}

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="hero-page">
+    <h1 class="home-tittle">About Us</h1>
+    <p>Learn more about who we are, what we do, and why we do it.</p>
+</div>
+
+<!-- About Section -->
+<section class="about">
+    <div class="section-heading">
+        <h2>Who We Are</h2>
+    </div>
+
+    <div class="about-wrapper">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900" alt="Our Team">
+
+        <div class="about-text">
+            <p>
+                We are a passionate team of developers and designers focused on building
+                modern, secure, and scalable web applications. Our mission is to help
+                businesses grow through technology.
+            </p>
+
+            <p>
+                Using powerful frameworks like Django and modern frontend tools,
+                we create solutions that are fast, reliable, and easy to maintain.
+            </p>
+
+            <ul>
+                <li>✅ Experienced Development Team</li>
+                <li>✅ Clean & Modern Design</li>
+                <li>✅ Secure & Scalable Solutions</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<!-- Why Choose Us -->
+<section class="why-us">
+    <div class="section-heading">
+        <h2>Why Choose Us</h2>
+    </div>
+
+    <div class="why-wrapper">
+        <div class="why-card">
+            <h3>🚀 Fast Delivery</h3>
+            <p>We deliver projects on time without compromising quality.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>🔒 Secure Systems</h3>
+            <p>Security is our top priority in every project we build.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>💡 Smart Solutions</h3>
+            <p>We build solutions that are efficient, scalable, and future-proof.</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

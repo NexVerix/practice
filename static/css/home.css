@@ -1,0 +1,269 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Headings */
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    color: #222;
+    position: relative;
+}
+
+.section-heading h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #0d6efd;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* Hero section */
+.hero-page {
+    min-height: 80vh;
+    background: linear-gradient(to right, #0d6efd, #4facfe);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.home-tittle {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-page p {
+    max-width: 700px;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.btn-butt {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background: #fff;
+    color: #0d6efd;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #e6e6e6;
+}
+
+/* About & Service sections */
+section {
+    padding: 80px 10%;
+    background: #fff;
+}
+
+.about,
+.service {
+    background-color: #ffffff;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.page img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.para {
+    flex: 1;
+}
+
+.para p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.para ul {
+    list-style: none;
+}
+
+.para ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Service specific */
+.service .page {
+    flex-direction: row-reverse;
+}
+
+/* Divider */
+hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+}
+/* ===== Footer ===== */
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 60px 20px 20px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #1abc9c; /* Highlight color on hover */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-form, .footer-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-form h3,
+.footer-info h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #ffffff;
+    border-bottom: 2px solid #1abc9c;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-form input,
+.footer-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.footer-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1abc9c;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-form button:hover {
+    background-color: #16a085;
+}
+
+.footer-info .social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-info .social-links a {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.footer-info .social-links a:hover {
+    transform: scale(1.2);
+}
+
+.footer-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-info ul li {
+    margin-bottom: 10px;
+}
+
+.footer-info ul li a:hover {
+    color: #1abc9c;
+}
+
+footer .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-form, .footer-info {
+        min-width: 100%;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .home-tittle {
+        font-size: 30px;
+    }
+
+    .page {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+}

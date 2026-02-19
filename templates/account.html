@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}My Account{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/account.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="hero-page">
+    <h1 class="home-tittle">My Account</h1>
+    <p>Manage your profile and account information</p>
+</div>
+
+<!-- Account Section -->
+<section class="account">
+    <div class="account-wrapper">
+
+        <!-- Sidebar -->
+        <div class="account-sidebar">
+            <h3>Account Menu</h3>
+            <ul>
+                <li><a href="#" class="active">Profile</a></li>
+               <li><a href="{% url 'settings' %}">Settings</a></li>
+        <li><a href="{% url 'change_password' %}">Change Password</a></li>
+
+                <li>
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="logout-btn">Logout</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="account-content">
+            <h2>Profile Information</h2>
+
+            <div class="profile-box">
+                <p><strong>Username:</strong> {{ user.username }}</p>
+                <p><strong>Email:</strong> {{ user.email }}</p>
+                <p><strong>Joined:</strong> {{ user.date_joined|date:"M d, Y" }}</p>
+            </div>
+
+            <h3>Edit Profile</h3>
+
+            <form method="post" class="account-form">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Username" value="{{ user.username }}">
+                <input type="email" name="email" placeholder="Email" value="{{ user.email }}">
+                <button type="submit" class="btn btn-primary">Update Profile</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

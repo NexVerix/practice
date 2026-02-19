@@ -1,0 +1,154 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background-color: #f8f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero */
+.hero-page {
+    min-height: 60vh;
+    background: linear-gradient(135deg, #0d6efd, #4facfe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    padding: 40px;
+}
+
+.home-tittle {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-page p {
+    max-width: 700px;
+    font-size: 18px;
+}
+
+/* Section heading */
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    color: #222;
+    position: relative;
+}
+
+.section-heading h2::after {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background-color: #0d6efd;
+    display: block;
+    margin: 12px auto;
+    border-radius: 5px;
+}
+
+/* Service section */
+.service {
+    padding: 80px 10%;
+    background-color: #ffffff;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.page img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.para {
+    flex: 1;
+}
+
+.para h3 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #0d6efd;
+}
+
+.para p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* Call to action */
+.contact {
+    padding: 80px 10%;
+    background: #f1f4ff;
+    text-align: center;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+    padding: 14px 34px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #084298;
+}
+
+/* Divider */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .home-tittle {
+        font-size: 30px;
+    }
+
+    .page {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .para h3 {
+        font-size: 22px;
+    }
+
+    .service,
+    .contact {
+        padding: 60px 6%;
+    }
+}

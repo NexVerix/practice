@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="hero-page">
+    <h1 class="home-tittle">Contact Us</h1>
+    <p>We’d love to hear from you. Send us a message and we’ll respond as soon as possible.</p>
+</div>
+
+<!-- Contact Section -->
+<section class="contact">
+    <div class="section-heading">
+        <h2>Get in Touch</h2>
+    </div>
+
+    <div class="contact-wrapper">
+
+        <!-- Contact Form -->
+        <form class="contact-form" method="post">
+            {% csrf_token %}
+
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>📧 email123@gmail.com</p>
+            <p>📞 9826706072</p>
+            <p>📍 New Plaza, Putalisadak, Kathmandu</p>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

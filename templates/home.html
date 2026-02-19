@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section with Background Image -->
+<div class="hero-page" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600'); background-size: cover; background-position: center; height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center;">
+    <h1 class="home-tittle">Hello {{ name }}, welcome to our website</h1>
+    <p>We provide modern, scalable, and secure web solutions to help your business grow.</p>
+    <div class="btn-butt">
+        <a href="{% url 'service' %}" class="btn btn-primary">Our Services</a>
+        <a href="{% url 'contact' %}" class="btn btn-secondary">Contact Us</a>
+    </div>
+</div>
+
+<!-- About Section -->
+<section class="about">
+    <div class="section-heading">
+        <h2>About Us</h2>
+    </div>
+    <div class="page" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin: 40px 0;">
+        <div class="about-image" style="flex: 1; min-width: 300px;">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800" alt="About Image" style="width: 100%; border-radius: 10px;">
+        </div>
+        <div class="para" style="flex: 2; min-width: 300px;">
+            <p>Django is a powerful Python web framework suitable for beginners and professionals alike. Learning Django requires understanding Python basics like variables, loops, functions, and classes. Once comfortable, you can explore Django’s project structure, views, templates, and models to build real-world web applications efficiently.</p>
+            <ul>
+                <li>✅ Scalable web solutions</li>
+                <li>✅ Secure backend systems</li>
+                <li>✅ Modern UI/UX design</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<!-- Services Section -->
+<section class="service">
+    <div class="section-heading">
+        <h2>Our Services</h2>
+    </div>
+
+    <!-- Web Development -->
+    <div class="page" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin: 40px 0;">
+        <div class="para" style="flex: 2; min-width: 300px;">
+            <h3>🌐 Web Development</h3>
+            <p>We build responsive and fast websites using modern technologies. Our solutions are optimized for performance, security, and scalability.</p>
+        </div>
+        <div class="service-image" style="flex: 1; min-width: 300px;">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800" alt="Web Development" style="width: 100%; border-radius: 10px;">
+        </div>
+    </div>
+
+    <!-- Django Backend -->
+    <div class="page" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin: 40px 0;">
+        <div class="para" style="flex: 2; min-width: 300px;">
+            <h3>⚙️ Django Backend Development</h3>
+            <p>We specialize in Django-based backend systems including authentication, APIs, dashboards, and database-driven applications.</p>
+        </div>
+        <div class="service-image" style="flex: 1; min-width: 300px;">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Django Backend" style="width: 100%; border-radius: 10px;">
+        </div>
+    </div>
+
+    <!-- UI/UX Design -->
+    <div class="page" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin: 40px 0;">
+        <div class="para" style="flex: 2; min-width: 300px;">
+            <h3>🎨 UI / UX Design</h3>
+            <p>Clean, user-friendly, and modern designs that improve user experience and increase engagement across all devices.</p>
+        </div>
+        <div class="service-image" style="flex: 1; min-width: 300px;">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800" alt="UI UX Design" style="width: 100%; border-radius: 10px;">
+        </div>
+    </div>
+</section>
+
+<hr>
+<!-- Footer Section -->
+<footer style="background-color: #1a1a1a; color: white; padding: 60px 20px; margin-top: 60px;">
+    <div class="footer-container" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; max-width: 1200px; margin: auto;">
+
+        <!-- Contact Form -->
+        <div class="footer-form" style="flex: 1; min-width: 300px;">
+            <h3>Contact Us</h3>
+            <form action="{% url 'contact' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:10px; margin-bottom:10px; border-radius:5px; border:none;">
+                <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:10px; margin-bottom:10px; border-radius:5px; border:none;">
+                <textarea name="message" placeholder="Your Message" rows="4" required style="width:100%; padding:10px; margin-bottom:10px; border-radius:5px; border:none;"></textarea>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Info & Social Media -->
+        <div class="footer-info" style="flex: 1; min-width: 300px;">
+            <h3>Get in Touch</h3>
+            <p>Email: <a href="mailto:email123@gmail.com" style="color:white;">email123@gmail.com</a></p>
+            <p>Phone: 📱 9826706072</p>
+            <p>Address: New plaza, Putalisadak, Kathmandu</p>
+
+            <h3>Follow Us</h3>
+            <div class="social-links" style="display: flex; gap: 15px; font-size: 20px;">
+                <a href="https://facebook.com" target="_blank" style="color:white;">🌐 Facebook</a>
+                <a href="https://twitter.com" target="_blank" style="color:white;">🐦 Twitter</a>
+                <a href="https://instagram.com" target="_blank" style="color:white;">📸 Instagram</a>
+                <a href="https://linkedin.com" target="_blank" style="color:white;">💼 LinkedIn</a>
+            </div>
+
+            <h3>Quick Links</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="{% url 'about' %}" style="color:white;">About Us</a></li>
+                <li><a href="{% url 'service' %}" style="color:white;">Services</a></li>
+                <li><a href="{% url 'account' %}" style="color:white;">Account</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:40px; font-size:14px;">
+        &copy; {{ now.year }} Your Company. All Rights Reserved.
+    </div>
+</footer>
+
+
+{% endblock %}

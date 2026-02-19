@@ -1,0 +1,14 @@
+<div class="account-sidebar">
+    <h3>Account Menu</h3>
+    <ul>
+        <li><a href="{% url 'account' %}">Profile</a></li>
+        <li><a href="{% url 'settings' %}">Settings</a></li>
+        <li><a href="{% url 'change_password' %}">Change Password</a></li>
+        <li>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="logout-btn">Logout</button>
+            </form>
+        </li>
+    </ul>
+</div>

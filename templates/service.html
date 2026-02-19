@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Service{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/service.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="hero-page">
+    <h1 class="home-tittle">Our Services</h1>
+    <p>We provide modern, scalable, and secure web solutions to help your business grow.</p>
+</div>
+
+<!-- Services Section -->
+<section class="service">
+    <div class="section-heading">
+        <h2>What We Offer</h2>
+    </div>
+
+    <div class="page">
+        <div class="para">
+            <h3>🌐 Web Development</h3>
+            <p>
+                We build responsive and fast websites using modern technologies.
+                Our solutions are optimized for performance, security, and scalability.
+            </p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800" alt="Web Development">
+    </div>
+
+    <br><br>
+
+    <div class="page">
+        <div class="para">
+            <h3>⚙️ Django Backend Development</h3>
+            <p>
+                We specialize in Django-based backend systems including authentication,
+                APIs, dashboards, and database-driven applications.
+            </p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Django Development">
+    </div>
+
+    <br><br>
+
+    <div class="page">
+        <div class="para">
+            <h3>🎨 UI / UX Design</h3>
+            <p>
+                Clean, user-friendly, and modern designs that improve user experience
+                and increase engagement across all devices.
+            </p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800" alt="UI UX Design">
+    </div>
+</section>
+
+<hr>
+
+<!-- Call To Action -->
+<section class="contact">
+    <div class="section-heading">
+        <h2>Get Started</h2>
+    </div>
+
+    <div class="para" style="text-align:center;">
+        <p>
+            Want to work with us?  
+            Contact us today and let’s build something amazing together.
+        </p>
+        <br>
+        <button class="btn btn-primary">Contact Us</button>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+practice/
+│
+├── manage.py
+│
+│practice/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── code1/                    
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── views.py
+│   ├── urls.py
+│   └── migrations/
+│       └── __init__.py
+│
+├── templates/               
+│   ├── base.html
+│   ├── home.html
+│   ├── service.html
+│   ├── about.html
+│   ├── contact.html
+│   └── account.html
+│   ├── settings.html
+│   ├── account_sidebar.html
+│   ├── change_password.html
+│   ├── signup.html
+│   └── login.html
+│   
+│
+├── static/css/                  
+│   ├──style.css
+│   ├──service.css
+│   ├──home.css
+│   ├──contact.css
+│   ├──account.css
+│   ├──about.css
+│
+└── db.sqlite3
