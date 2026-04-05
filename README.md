@@ -162,9 +162,8 @@ Visit: `http://127.0.0.1:8000/`
 
 ---
 
-## 🚀 Built at NexVerix
+## 🚀 Built under the NexVerix
 
-This project is part of my developer work under the NexVerix brand, focused on building scalable full-stack web applications using Django and modern web technologies.
 
 
 
